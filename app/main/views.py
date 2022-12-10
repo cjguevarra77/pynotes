@@ -1,11 +1,13 @@
 from . import main
+from flask import render_template
 
 @main.route("/")
 @main.route("/home")
 @main.route("/index")
 def index():
-    return "<h1>PyNotes: Simple, easy-to-use note keeping web app </h1>"
+    
+    return render_template("main/index.html", title="PyNotes Home", content="PyNotes: Simple, easy-to-use note keeping web app ")
 
 @main.route('/about')
 def about():
-    return "<h1>About PyNotes</h1>"
+    return render_template("main/about.html", title="About PyNotes", content="PyNotes: Simple, easy-to-use note keeping web app ")
