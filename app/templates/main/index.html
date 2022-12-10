@@ -1,0 +1,11 @@
+{% extends "shared/layouts/main.html" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p> {{ content }}</p>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+<script src="{{ url_for('static', filename='js/index.js') }}" type="module"></script>
+{% endblock %}
